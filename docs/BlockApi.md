@@ -20,12 +20,12 @@ Get block request by height or hash
 
 ```java
 // Import classes:
-import com.metasv.mvc.client.openapi.ApiClient;
-import com.metasv.mvc.client.openapi.ApiException;
-import com.metasv.mvc.client.openapi.Configuration;
-import com.metasv.mvc.client.openapi.auth.*;
-import com.metasv.mvc.client.openapi.models.*;
-import com.metasv.mvc.client.openapi.api.BlockApi;
+import com.mvcapi.client.openapi.ApiClient;
+import com.mvcapi.client.openapi.ApiException;
+import com.mvcapi.client.openapi.Configuration;
+import com.mvcapi.client.openapi.auth.*;
+import com.mvcapi.client.openapi.models.*;
+import com.mvcapi.client.openapi.api.BlockApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -89,12 +89,12 @@ Get recent block list by paging. 30 items per page.
 
 ```java
 // Import classes:
-import com.metasv.mvc.client.openapi.ApiClient;
-import com.metasv.mvc.client.openapi.ApiException;
-import com.metasv.mvc.client.openapi.Configuration;
-import com.metasv.mvc.client.openapi.auth.*;
-import com.metasv.mvc.client.openapi.models.*;
-import com.metasv.mvc.client.openapi.api.BlockApi;
+import com.mvcapi.client.openapi.ApiClient;
+import com.mvcapi.client.openapi.ApiException;
+import com.mvcapi.client.openapi.Configuration;
+import com.mvcapi.client.openapi.auth.*;
+import com.mvcapi.client.openapi.models.*;
+import com.mvcapi.client.openapi.api.BlockApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -157,12 +157,12 @@ Get current blockchain info from full node.
 
 ```java
 // Import classes:
-import com.metasv.mvc.client.openapi.ApiClient;
-import com.metasv.mvc.client.openapi.ApiException;
-import com.metasv.mvc.client.openapi.Configuration;
-import com.metasv.mvc.client.openapi.auth.*;
-import com.metasv.mvc.client.openapi.models.*;
-import com.metasv.mvc.client.openapi.api.BlockApi;
+import com.mvcapi.client.openapi.ApiClient;
+import com.mvcapi.client.openapi.ApiException;
+import com.mvcapi.client.openapi.Configuration;
+import com.mvcapi.client.openapi.auth.*;
+import com.mvcapi.client.openapi.models.*;
+import com.mvcapi.client.openapi.api.BlockApi;
 
 public class Example {
     public static void main(String[] args) {

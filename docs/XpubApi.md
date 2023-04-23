@@ -20,12 +20,12 @@ Get xpub address type and index. Only index under /0/70 /1/30 is valid. Otherwis
 
 ```java
 // Import classes:
-import com.metasv.mvc.client.openapi.ApiClient;
-import com.metasv.mvc.client.openapi.ApiException;
-import com.metasv.mvc.client.openapi.Configuration;
-import com.metasv.mvc.client.openapi.auth.*;
-import com.metasv.mvc.client.openapi.models.*;
-import com.metasv.mvc.client.openapi.api.XpubApi;
+import com.mvcapi.client.openapi.ApiClient;
+import com.mvcapi.client.openapi.ApiException;
+import com.mvcapi.client.openapi.Configuration;
+import com.mvcapi.client.openapi.auth.*;
+import com.mvcapi.client.openapi.models.*;
+import com.mvcapi.client.openapi.api.XpubApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -94,12 +94,12 @@ This api returns confirmed balance(same as address balance), not sumed utxos.
 
 ```java
 // Import classes:
-import com.metasv.mvc.client.openapi.ApiClient;
-import com.metasv.mvc.client.openapi.ApiException;
-import com.metasv.mvc.client.openapi.Configuration;
-import com.metasv.mvc.client.openapi.auth.*;
-import com.metasv.mvc.client.openapi.models.*;
-import com.metasv.mvc.client.openapi.api.XpubApi;
+import com.mvcapi.client.openapi.ApiClient;
+import com.mvcapi.client.openapi.ApiException;
+import com.mvcapi.client.openapi.Configuration;
+import com.mvcapi.client.openapi.auth.*;
+import com.mvcapi.client.openapi.models.*;
+import com.mvcapi.client.openapi.api.XpubApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -163,12 +163,12 @@ Get xpub utxos by specific xpub(300 per page).
 
 ```java
 // Import classes:
-import com.metasv.mvc.client.openapi.ApiClient;
-import com.metasv.mvc.client.openapi.ApiException;
-import com.metasv.mvc.client.openapi.Configuration;
-import com.metasv.mvc.client.openapi.auth.*;
-import com.metasv.mvc.client.openapi.models.*;
-import com.metasv.mvc.client.openapi.api.XpubApi;
+import com.mvcapi.client.openapi.ApiClient;
+import com.mvcapi.client.openapi.ApiException;
+import com.mvcapi.client.openapi.Configuration;
+import com.mvcapi.client.openapi.auth.*;
+import com.mvcapi.client.openapi.models.*;
+import com.mvcapi.client.openapi.api.XpubApi;
 
 public class Example {
     public static void main(String[] args) {

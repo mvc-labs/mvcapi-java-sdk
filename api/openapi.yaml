@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   contact:
-    email: heqiming@metasv.com
+    email: heqiming@mvcapi.com
     name: MicrovisionChain team
   description: API definition for MicrovisionChain provided apis
   license:
@@ -219,14 +219,14 @@ paths:
           description: Transaction not found.
       security:
       - bearerAuth: []
-      summary: Whether MetaSV have seen this tx before. This is a fast approach to
+      summary: Whether MvcApi have seen this tx before. This is a fast approach to
         know if the tx exist or not.
       tags:
       - tx
       x-accepts: application/json
   /tx/broadcast:
     post:
-      description: This api will broadcast to metasv fullnode directly. This endpoint
+      description: This api will broadcast to MvcApi fullnode directly. This endpoint
         use rpc sendrawtransaction.
       requestBody:
         content:
@@ -248,14 +248,14 @@ paths:
           description: Broadcast Failed
       security:
       - bearerAuth: []
-      summary: Broadcast tx to metasv fullnode.
+      summary: Broadcast tx to MvcApi fullnode.
       tags:
       - tx
       x-contentType: application/json
       x-accepts: application/json
   /tx/broadcast/batch:
     post:
-      description: This api will broadcast to metasv fullnode directly.
+      description: This api will broadcast to MvcApi fullnode directly.
       requestBody:
         content:
           application/json:
@@ -272,7 +272,7 @@ paths:
           description: Broadcast result list, txid returned with the original order
       security:
       - bearerAuth: []
-      summary: Broadcast a batch of tx to metasv fullnode. This endpoint use rpc sendrawtransactions.
+      summary: Broadcast a batch of tx to MvcApi fullnode. This endpoint use rpc sendrawtransactions.
       tags:
       - tx
       x-contentType: application/json

@@ -4,7 +4,7 @@ MicrovisionChain API Document
 
 - API version: 3.0.8
 
-- Build date: 2023-04-16T17:24:50.047362+09:00[Asia/Tokyo]
+- Build date: 2023-04-23T15:24:34.240678+09:00[Asia/Tokyo]
 
 API definition for MicrovisionChain provided apis
 
@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>com.metasv.mvc</groupId>
+  <groupId>com.mvcapi</groupId>
   <artifactId>openapi-java-client</artifactId>
   <version>3.0.8</version>
   <scope>compile</scope>
@@ -52,7 +52,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.metasv.mvc:openapi-java-client:3.0.8"
+compile "com.mvcapi:openapi-java-client:3.0.8"
 ```
 
 ### Others
@@ -74,10 +74,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import com.metasv.mvc.client.openapi.*;
-import com.metasv.mvc.client.openapi.auth.*;
-import com.metasv.mvc.client.openapi.model.*;
-import com.metasv.mvc.client.openapi.api.AddressApi;
+import com.mvcapi.client.openapi.*;
+import com.mvcapi.client.openapi.auth.*;
+import com.mvcapi.client.openapi.model.*;
+import com.mvcapi.client.openapi.api.AddressApi;
 
 public class AddressApiExample {
 
@@ -134,11 +134,11 @@ Class | Method | HTTP request | Description
 *OutpointApi* | [**outpointTxidIndexGet**](docs/OutpointApi.md#outpointTxidIndexGet) | **GET** /outpoint/{txid}/{index} | Get tx output(outpoint for vin) spent status.
 *TreasuryApi* | [**treasuryGet**](docs/TreasuryApi.md#treasuryGet) | **GET** /treasury | Get current treasury info.
 *TreasuryApi* | [**treasuryHistoryGet**](docs/TreasuryApi.md#treasuryHistoryGet) | **GET** /treasury/history | Get all treasury history.
-*TxApi* | [**txBroadcastBatchPost**](docs/TxApi.md#txBroadcastBatchPost) | **POST** /tx/broadcast/batch | Broadcast a batch of tx to metasv fullnode. This endpoint use rpc sendrawtransactions.
-*TxApi* | [**txBroadcastPost**](docs/TxApi.md#txBroadcastPost) | **POST** /tx/broadcast | Broadcast tx to metasv fullnode.
+*TxApi* | [**txBroadcastBatchPost**](docs/TxApi.md#txBroadcastBatchPost) | **POST** /tx/broadcast/batch | Broadcast a batch of tx to MvcApi fullnode. This endpoint use rpc sendrawtransactions.
+*TxApi* | [**txBroadcastPost**](docs/TxApi.md#txBroadcastPost) | **POST** /tx/broadcast | Broadcast tx to MvcApi fullnode.
 *TxApi* | [**txTxidGet**](docs/TxApi.md#txTxidGet) | **GET** /tx/{txid} | Get transaction detail by specific txid.
 *TxApi* | [**txTxidRawGet**](docs/TxApi.md#txTxidRawGet) | **GET** /tx/{txid}/raw | Get transaction raw hex by specific txid.
-*TxApi* | [**txTxidSeenGet**](docs/TxApi.md#txTxidSeenGet) | **GET** /tx/{txid}/seen | Whether MetaSV have seen this tx before. This is a fast approach to know if the tx exist or not.
+*TxApi* | [**txTxidSeenGet**](docs/TxApi.md#txTxidSeenGet) | **GET** /tx/{txid}/seen | Whether MvcApi have seen this tx before. This is a fast approach to know if the tx exist or not.
 *TxApi* | [**vinTxidDetailGet**](docs/TxApi.md#vinTxidDetailGet) | **GET** /vin/{txid}/detail | Get all output point of vins in the tx with detailed output script.
 *XpubApi* | [**xpubLiteXpubAddressAddressGet**](docs/XpubApi.md#xpubLiteXpubAddressAddressGet) | **GET** /xpubLite/{xpub}/address/{address} | Get xpub address type and index. Only index under /0/70 /1/30 is valid. Otherwise not found.
 *XpubApi* | [**xpubLiteXpubBalanceGet**](docs/XpubApi.md#xpubLiteXpubBalanceGet) | **GET** /xpubLite/{xpub}/balance | Get xpub balances including confirmed and unconfirmed.
@@ -206,5 +206,5 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 
 ## Author
 
-heqiming@metasv.com
+heqiming@mvcapi.com
 

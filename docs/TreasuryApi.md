@@ -19,12 +19,12 @@ Get current treasury info.
 
 ```java
 // Import classes:
-import com.metasv.mvc.client.openapi.ApiClient;
-import com.metasv.mvc.client.openapi.ApiException;
-import com.metasv.mvc.client.openapi.Configuration;
-import com.metasv.mvc.client.openapi.auth.*;
-import com.metasv.mvc.client.openapi.models.*;
-import com.metasv.mvc.client.openapi.api.TreasuryApi;
+import com.mvcapi.client.openapi.ApiClient;
+import com.mvcapi.client.openapi.ApiException;
+import com.mvcapi.client.openapi.Configuration;
+import com.mvcapi.client.openapi.auth.*;
+import com.mvcapi.client.openapi.models.*;
+import com.mvcapi.client.openapi.api.TreasuryApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -83,12 +83,12 @@ Get all treasury history.
 
 ```java
 // Import classes:
-import com.metasv.mvc.client.openapi.ApiClient;
-import com.metasv.mvc.client.openapi.ApiException;
-import com.metasv.mvc.client.openapi.Configuration;
-import com.metasv.mvc.client.openapi.auth.*;
-import com.metasv.mvc.client.openapi.models.*;
-import com.metasv.mvc.client.openapi.api.TreasuryApi;
+import com.mvcapi.client.openapi.ApiClient;
+import com.mvcapi.client.openapi.ApiException;
+import com.mvcapi.client.openapi.Configuration;
+import com.mvcapi.client.openapi.auth.*;
+import com.mvcapi.client.openapi.models.*;
+import com.mvcapi.client.openapi.api.TreasuryApi;
 
 public class Example {
     public static void main(String[] args) {

@@ -20,12 +20,12 @@ Get detailed info for a utxo(or txo if spent), Only outputs spent no longer than
 
 ```java
 // Import classes:
-import com.metasv.mvc.client.openapi.ApiClient;
-import com.metasv.mvc.client.openapi.ApiException;
-import com.metasv.mvc.client.openapi.Configuration;
-import com.metasv.mvc.client.openapi.auth.*;
-import com.metasv.mvc.client.openapi.models.*;
-import com.metasv.mvc.client.openapi.api.OutpointApi;
+import com.mvcapi.client.openapi.ApiClient;
+import com.mvcapi.client.openapi.ApiException;
+import com.mvcapi.client.openapi.Configuration;
+import com.mvcapi.client.openapi.auth.*;
+import com.mvcapi.client.openapi.models.*;
+import com.mvcapi.client.openapi.api.OutpointApi;
 
 public class Example {
     public static void main(String[] args) {

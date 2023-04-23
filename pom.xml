@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.metasv.mvc</groupId>
+    <groupId>com.mvcapi</groupId>
     <artifactId>openapi-java-client</artifactId>
     <packaging>jar</packaging>
     <name>openapi-java-client</name>
     <version>3.0.8</version>
-    <url>https://github.com/metasv/metasv-mvc-sdk-java</url>
-    <description>Java Client SDK for MetaSV API.</description>
+    <url>https://github.com/mvc-labs/mvcapi-sdk-java</url>
+    <description>Java Client SDK for mvcapi API.</description>
     <scm>
         <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
         <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
@@ -25,9 +25,9 @@
     <developers>
         <developer>
             <name>OpenAPI-Generator Contributors</name>
-            <email>heqiming@metasv.com</email>
-            <organization>MetaSV.com</organization>
-            <organizationUrl>https://mvc.metasv.com/</organizationUrl>
+            <email>heqiming@mvcapi.com</email>
+            <organization>mvcapi.com</organization>
+            <organizationUrl>https://mvcapi.com/</organizationUrl>
         </developer>
     </developers>
 

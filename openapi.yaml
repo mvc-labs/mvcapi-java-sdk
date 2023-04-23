@@ -7,7 +7,7 @@ info:
     name: MIT License
     url: https://opensource.org/licenses/MIT
   contact:
-    email: heqiming@metasv.com
+    email: heqiming@mvcapi.com
     name: MicrovisionChain team
 
 servers:
@@ -196,7 +196,7 @@ paths:
         - bearerAuth: [ ]
       tags:
         - tx
-      summary: Whether MetaSV have seen this tx before. This is a fast approach to know if the tx exist or not.
+      summary: Whether MvcApi have seen this tx before. This is a fast approach to know if the tx exist or not.
       parameters:
         - name: txid
           in: path
@@ -220,8 +220,8 @@ paths:
         - bearerAuth: [ ]
       tags:
         - tx
-      summary: Broadcast tx to metasv fullnode.
-      description: This api will broadcast to metasv fullnode directly. This endpoint use rpc sendrawtransaction.
+      summary: Broadcast tx to MvcApi fullnode.
+      description: This api will broadcast to MvcApi fullnode directly. This endpoint use rpc sendrawtransaction.
       requestBody:
         content:
           application/json:
@@ -247,8 +247,8 @@ paths:
         - bearerAuth: [ ]
       tags:
         - tx
-      summary: Broadcast a batch of tx to metasv fullnode. This endpoint use rpc sendrawtransactions.
-      description: This api will broadcast to metasv fullnode directly.
+      summary: Broadcast a batch of tx to MvcApi fullnode. This endpoint use rpc sendrawtransactions.
+      description: This api will broadcast to MvcApi fullnode directly.
       requestBody:
         content:
           application/json:
