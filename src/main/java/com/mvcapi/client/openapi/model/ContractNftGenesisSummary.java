@@ -37,7 +37,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ContractNftGenesisSummary.JSON_PROPERTY_COUNT
 })
 @JsonTypeName("ContractNftGenesisSummary")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:24:34.240678+09:00[Asia/Tokyo]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:27:34.116402+09:00[Asia/Tokyo]")
 public class ContractNftGenesisSummary {
   public static final String JSON_PROPERTY_ADDRESS = "address";
   private String address;

@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   XpubBalance.JSON_PROPERTY_UNCONFIRMED
 })
 @JsonTypeName("XpubBalance")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:24:34.240678+09:00[Asia/Tokyo]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:27:34.116402+09:00[Asia/Tokyo]")
 public class XpubBalance {
   public static final String JSON_PROPERTY_CONFIRMED = "confirmed";
   private Long confirmed;

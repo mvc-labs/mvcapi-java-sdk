@@ -39,7 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   BlockHeaderPage.JSON_PROPERTY_SIZE
 })
 @JsonTypeName("BlockHeaderPage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:24:34.240678+09:00[Asia/Tokyo]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:27:34.116402+09:00[Asia/Tokyo]")
 public class BlockHeaderPage {
   public static final String JSON_PROPERTY_HEIGHT = "height";
   private Long height;

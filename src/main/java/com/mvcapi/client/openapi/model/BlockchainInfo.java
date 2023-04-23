@@ -41,7 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   BlockchainInfo.JSON_PROPERTY_ESTIMATED_BLOCK_SIZE
 })
 @JsonTypeName("BlockchainInfo")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:24:34.240678+09:00[Asia/Tokyo]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:27:34.116402+09:00[Asia/Tokyo]")
 public class BlockchainInfo {
   public static final String JSON_PROPERTY_CHAIN = "chain";
   private String chain;

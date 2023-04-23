@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   TreasuryHistory.JSON_PROPERTY_ANNOUNCEMENT_URL
 })
 @JsonTypeName("TreasuryHistory")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:24:34.240678+09:00[Asia/Tokyo]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:27:34.116402+09:00[Asia/Tokyo]")
 public class TreasuryHistory {
   public static final String JSON_PROPERTY_TXID = "txid";
   private String txid;

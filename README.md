@@ -4,7 +4,7 @@ MicrovisionChain API Document
 
 - API version: 3.0.8
 
-- Build date: 2023-04-23T15:24:34.240678+09:00[Asia/Tokyo]
+- Build date: 2023-04-23T15:27:34.116402+09:00[Asia/Tokyo]
 
 API definition for MicrovisionChain provided apis
 
