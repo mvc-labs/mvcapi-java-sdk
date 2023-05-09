@@ -46,7 +46,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ContractFtUtxo.JSON_PROPERTY_FLAG
 })
 @JsonTypeName("ContractFtUtxo")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:27:34.116402+09:00[Asia/Tokyo]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-09T18:29:18.056213+09:00[Asia/Tokyo]")
 public class ContractFtUtxo {
   public static final String JSON_PROPERTY_ADDRESS = "address";
   private String address;

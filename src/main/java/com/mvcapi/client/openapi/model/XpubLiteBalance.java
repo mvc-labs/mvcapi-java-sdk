@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   XpubLiteBalance.JSON_PROPERTY_BALANCE
 })
 @JsonTypeName("XpubLiteBalance")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-23T15:27:34.116402+09:00[Asia/Tokyo]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-09T18:29:18.056213+09:00[Asia/Tokyo]")
 public class XpubLiteBalance {
   public static final String JSON_PROPERTY_BALANCE = "balance";
   private Long balance;
