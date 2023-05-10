@@ -2,9 +2,9 @@
 
 MicrovisionChain API Document
 
-- API version: 3.0.8
+- API version: 3.0.9
 
-- Build date: 2023-05-09T18:29:18.056213+09:00[Asia/Tokyo]
+- Build date: 2023-05-10T16:23:17.579988+09:00[Asia/Tokyo]
 
 API definition for MicrovisionChain provided apis
 
@@ -42,7 +42,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.mvcapi</groupId>
   <artifactId>openapi-java-client</artifactId>
-  <version>3.0.8</version>
+  <version>3.0.9</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -52,7 +52,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.mvcapi:openapi-java-client:3.0.8"
+compile "com.mvcapi:openapi-java-client:3.0.9"
 ```
 
 ### Others
@@ -65,7 +65,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/openapi-java-client-3.0.8.jar`
+- `target/openapi-java-client-3.0.9.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -122,6 +122,7 @@ Class | Method | HTTP request | Description
 *ContractApi* | [**contractFtAddressAddressBalanceGet**](docs/ContractApi.md#contractFtAddressAddressBalanceGet) | **GET** /contract/ft/address/{address}/balance | Get all contract token balances for specific address.
 *ContractApi* | [**contractFtAddressAddressCodeHashGenesisTxGet**](docs/ContractApi.md#contractFtAddressAddressCodeHashGenesisTxGet) | **GET** /contract/ft/address/{address}/{codeHash}/{genesis}/tx | Get all contract token balances for specific address.
 *ContractApi* | [**contractFtAddressAddressUtxoGet**](docs/ContractApi.md#contractFtAddressAddressUtxoGet) | **GET** /contract/ft/address/{address}/utxo | Get all contract token utxos for specific address.
+*ContractApi* | [**contractFtGenesisCodeHashGenesisCirculationGet**](docs/ContractApi.md#contractFtGenesisCodeHashGenesisCirculationGet) | **GET** /contract/ft/genesis/{codeHash}/{genesis}/circulation | Get all sum of circulation ft token utxos by codeHash and genesisId(10min cached).
 *ContractApi* | [**contractNftAddressAddressCountConfirmedGet**](docs/ContractApi.md#contractNftAddressAddressCountConfirmedGet) | **GET** /contract/nft/address/{address}/count/confirmed | Get confirmed utxo count for specific nft(ignore all unconfirmed txs).
 *ContractApi* | [**contractNftAddressAddressSummaryGet**](docs/ContractApi.md#contractNftAddressAddressSummaryGet) | **GET** /contract/nft/address/{address}/summary | Get nft summary(NFT count group by genesis) for address.
 *ContractApi* | [**contractNftAddressAddressUtxoGet**](docs/ContractApi.md#contractNftAddressAddressUtxoGet) | **GET** /contract/nft/address/{address}/utxo | Get all contract nft token utxos for specific address.
@@ -161,6 +162,7 @@ Class | Method | HTTP request | Description
  - [ClientPubkeyResult](docs/ClientPubkeyResult.md)
  - [ContractFtAddressTx](docs/ContractFtAddressTx.md)
  - [ContractFtBalance](docs/ContractFtBalance.md)
+ - [ContractFtGenesisCirculation](docs/ContractFtGenesisCirculation.md)
  - [ContractFtUtxo](docs/ContractFtUtxo.md)
  - [ContractNftAddressSummary](docs/ContractNftAddressSummary.md)
  - [ContractNftAuctionUtxo](docs/ContractNftAuctionUtxo.md)
@@ -206,5 +208,5 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 
 ## Author
 
-heqiming@mvcapi.com
+heqiming@metasv.com
 

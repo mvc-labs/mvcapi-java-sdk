@@ -64,7 +64,7 @@ import com.mvcapi.client.openapi.auth.HttpBasicAuth;
 import com.mvcapi.client.openapi.auth.HttpBearerAuth;
 import com.mvcapi.client.openapi.auth.ApiKeyAuth;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-09T18:29:18.056213+09:00[Asia/Tokyo]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-10T16:23:17.579988+09:00[Asia/Tokyo]")
 public class ApiClient extends JavaTimeFormatter {
     public enum CollectionFormat {
         CSV(","), TSV("\t"), SSV(" "), PIPES("|"), MULTI(null);

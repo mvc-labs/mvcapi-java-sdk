@@ -5,7 +5,7 @@
     <artifactId>openapi-java-client</artifactId>
     <packaging>jar</packaging>
     <name>openapi-java-client</name>
-    <version>3.0.8</version>
+    <version>3.0.9</version>
     <url>https://github.com/mvc-labs/mvcapi-sdk-java</url>
     <description>Java Client SDK for mvcapi API.</description>
     <scm>

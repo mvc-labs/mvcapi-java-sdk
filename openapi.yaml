@@ -2,12 +2,12 @@ openapi: 3.0.3
 info:
   title: MicrovisionChain API Document
   description: API definition for MicrovisionChain provided apis
-  version: 3.0.8
+  version: 3.0.9
   license:
     name: MIT License
     url: https://opensource.org/licenses/MIT
   contact:
-    email: heqiming@mvcapi.com
+    email: heqiming@metasv.com
     name: MicrovisionChain team
 
 servers:
@@ -725,6 +725,35 @@ paths:
                   $ref: '#/components/schemas/ContractFtAddressTx'
         '401':
           $ref: '#/components/responses/UnauthorizedError'
+
+  '/contract/ft/genesis/{codeHash}/{genesis}/circulation':
+    get:
+      security:
+        - bearerAuth: [ ]
+      tags:
+        - contract
+      summary: Get all sum of circulation ft token utxos by codeHash and genesisId(10min cached).
+      parameters:
+        - name: codeHash
+          in: path
+          description: Code hash of the token.
+          required: true
+          schema:
+            type: string
+        - name: genesis
+          in: path
+          description: Contract genesis
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Get circulation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContractFtGenesisCirculation'
+
 
   '/contract/nft/address/{address}/utxo':
     get:
@@ -1915,7 +1944,18 @@ components:
         txid:
           type: string
           description: txid of this record
-
+    ContractFtGenesisCirculation:
+      description: Get total circulation for specific genesis of ft token.
+      type: object
+      properties:
+        confirmed:
+          description: Confirmed circulation of the token(Sum of confirmed amount).
+          type: integer
+          format: int64
+        unconfirmed:
+          description: Unconfirmed circulation of the token(Unconfirmed new token - Unconfirmed spent).
+          type: integer
+          format: int64
 
     ContractNftUtxo:
       description: Contract non fungible token Utxo belongs to the specified address

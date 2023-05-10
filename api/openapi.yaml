@@ -1,14 +1,14 @@
 openapi: 3.0.3
 info:
   contact:
-    email: heqiming@mvcapi.com
+    email: heqiming@metasv.com
     name: MicrovisionChain team
   description: API definition for MicrovisionChain provided apis
   license:
     name: MIT License
     url: https://opensource.org/licenses/MIT
   title: MicrovisionChain API Document
-  version: 3.0.8
+  version: 3.0.9
 servers:
 - url: https://testnet.mvcapi.com
 - url: https://mainnet.mvcapi.com
@@ -856,6 +856,39 @@ paths:
       security:
       - bearerAuth: []
       summary: Get all contract token balances for specific address.
+      tags:
+      - contract
+      x-accepts: application/json
+  /contract/ft/genesis/{codeHash}/{genesis}/circulation:
+    get:
+      parameters:
+      - description: Code hash of the token.
+        explode: false
+        in: path
+        name: codeHash
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: Contract genesis
+        explode: false
+        in: path
+        name: genesis
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContractFtGenesisCirculation'
+          description: Get circulation successful.
+      security:
+      - bearerAuth: []
+      summary: Get all sum of circulation ft token utxos by codeHash and genesisId(10min
+        cached).
       tags:
       - contract
       x-accepts: application/json
@@ -2389,6 +2422,22 @@ components:
         txid:
           description: txid of this record
           type: string
+      type: object
+    ContractFtGenesisCirculation:
+      description: Get total circulation for specific genesis of ft token.
+      example:
+        unconfirmed: 6
+        confirmed: 0
+      properties:
+        confirmed:
+          description: Confirmed circulation of the token(Sum of confirmed amount).
+          format: int64
+          type: integer
+        unconfirmed:
+          description: Unconfirmed circulation of the token(Unconfirmed new token
+            - Unconfirmed spent).
+          format: int64
+          type: integer
       type: object
     ContractNftUtxo:
       description: Contract non fungible token Utxo belongs to the specified address

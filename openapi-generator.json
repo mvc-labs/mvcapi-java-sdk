@@ -6,7 +6,7 @@
   "invokerPackage": "com.mvcapi.client.openapi",
   "artifactDescription": "Java Client SDK for mvcapi API.",
   "artifactUrl": "https://github.com/mvc-labs/mvcapi-sdk-java",
-  "artifactVersion": "3.0.8",
+  "artifactVersion": "3.0.9",
   "developerEmail": "heqiming@mvcapi.com",
   "developerOrganization": "mvcapi.com",
   "developerOrganizationUrl": "https://mvcapi.com/",

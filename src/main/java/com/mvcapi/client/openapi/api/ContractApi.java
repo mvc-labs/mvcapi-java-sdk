@@ -4,6 +4,7 @@ import com.mvcapi.client.openapi.ApiClient;
 
 import com.mvcapi.client.openapi.model.ContractFtAddressTx;
 import com.mvcapi.client.openapi.model.ContractFtBalance;
+import com.mvcapi.client.openapi.model.ContractFtGenesisCirculation;
 import com.mvcapi.client.openapi.model.ContractFtUtxo;
 import com.mvcapi.client.openapi.model.ContractNftAddressSummary;
 import com.mvcapi.client.openapi.model.ContractNftGenesisSummary;
@@ -32,7 +33,7 @@ import org.springframework.http.MediaType;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-09T18:29:18.056213+09:00[Asia/Tokyo]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-10T16:23:17.579988+09:00[Asia/Tokyo]")
 public class ContractApi {
     private ApiClient apiClient;
 
@@ -240,6 +241,48 @@ public class ContractApi {
 
         ParameterizedTypeReference<ContractFtUtxo> localVarReturnType = new ParameterizedTypeReference<ContractFtUtxo>() {};
         return apiClient.invokeFluxAPI("/contract/ft/address/{address}/utxo", HttpMethod.GET, pathParams, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    }
+    /**
+     * Get all sum of circulation ft token utxos by codeHash and genesisId(10min cached).
+     * 
+     * <p><b>200</b> - Get circulation successful.
+     * @param codeHash Code hash of the token.
+     * @param genesis Contract genesis
+     * @return ContractFtGenesisCirculation
+     * @throws WebClientResponseException if an error occurs while attempting to invoke the API
+     */
+    public Mono<ContractFtGenesisCirculation> contractFtGenesisCodeHashGenesisCirculationGet(String codeHash, String genesis) throws WebClientResponseException {
+        Object postBody = null;
+        // verify the required parameter 'codeHash' is set
+        if (codeHash == null) {
+            throw new WebClientResponseException("Missing the required parameter 'codeHash' when calling contractFtGenesisCodeHashGenesisCirculationGet", HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.getReasonPhrase(), null, null, null);
+        }
+        // verify the required parameter 'genesis' is set
+        if (genesis == null) {
+            throw new WebClientResponseException("Missing the required parameter 'genesis' when calling contractFtGenesisCodeHashGenesisCirculationGet", HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.getReasonPhrase(), null, null, null);
+        }
+        // create path and map variables
+        final Map<String, Object> pathParams = new HashMap<String, Object>();
+
+        pathParams.put("codeHash", codeHash);
+        pathParams.put("genesis", genesis);
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json"
+        };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "bearerAuth" };
+
+        ParameterizedTypeReference<ContractFtGenesisCirculation> localVarReturnType = new ParameterizedTypeReference<ContractFtGenesisCirculation>() {};
+        return apiClient.invokeAPI("/contract/ft/genesis/{codeHash}/{genesis}/circulation", HttpMethod.GET, pathParams, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     }
     /**
      * Get confirmed utxo count for specific nft(ignore all unconfirmed txs).

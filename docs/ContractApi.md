@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**contractFtAddressAddressBalanceGet**](ContractApi.md#contractFtAddressAddressBalanceGet) | **GET** /contract/ft/address/{address}/balance | Get all contract token balances for specific address.
 [**contractFtAddressAddressCodeHashGenesisTxGet**](ContractApi.md#contractFtAddressAddressCodeHashGenesisTxGet) | **GET** /contract/ft/address/{address}/{codeHash}/{genesis}/tx | Get all contract token balances for specific address.
 [**contractFtAddressAddressUtxoGet**](ContractApi.md#contractFtAddressAddressUtxoGet) | **GET** /contract/ft/address/{address}/utxo | Get all contract token utxos for specific address.
+[**contractFtGenesisCodeHashGenesisCirculationGet**](ContractApi.md#contractFtGenesisCodeHashGenesisCirculationGet) | **GET** /contract/ft/genesis/{codeHash}/{genesis}/circulation | Get all sum of circulation ft token utxos by codeHash and genesisId(10min cached).
 [**contractNftAddressAddressCountConfirmedGet**](ContractApi.md#contractNftAddressAddressCountConfirmedGet) | **GET** /contract/nft/address/{address}/count/confirmed | Get confirmed utxo count for specific nft(ignore all unconfirmed txs).
 [**contractNftAddressAddressSummaryGet**](ContractApi.md#contractNftAddressAddressSummaryGet) | **GET** /contract/nft/address/{address}/summary | Get nft summary(NFT count group by genesis) for address.
 [**contractNftAddressAddressUtxoGet**](ContractApi.md#contractNftAddressAddressUtxoGet) | **GET** /contract/nft/address/{address}/utxo | Get all contract nft token utxos for specific address.
@@ -313,6 +314,76 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 | **200** | Get contract ft utxo success. |  -  |
 | **401** | Access token is missing or invalid |  -  |
+
+
+## contractFtGenesisCodeHashGenesisCirculationGet
+
+> ContractFtGenesisCirculation contractFtGenesisCodeHashGenesisCirculationGet(codeHash, genesis)
+
+Get all sum of circulation ft token utxos by codeHash and genesisId(10min cached).
+
+### Example
+
+```java
+// Import classes:
+import com.mvcapi.client.openapi.ApiClient;
+import com.mvcapi.client.openapi.ApiException;
+import com.mvcapi.client.openapi.Configuration;
+import com.mvcapi.client.openapi.auth.*;
+import com.mvcapi.client.openapi.models.*;
+import com.mvcapi.client.openapi.api.ContractApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://testnet.mvcapi.com");
+        
+        // Configure HTTP bearer authorization: bearerAuth
+        HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
+        bearerAuth.setBearerToken("BEARER TOKEN");
+
+        ContractApi apiInstance = new ContractApi(defaultClient);
+        String codeHash = "codeHash_example"; // String | Code hash of the token.
+        String genesis = "genesis_example"; // String | Contract genesis
+        try {
+            ContractFtGenesisCirculation result = apiInstance.contractFtGenesisCodeHashGenesisCirculationGet(codeHash, genesis);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ContractApi#contractFtGenesisCodeHashGenesisCirculationGet");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **codeHash** | **String**| Code hash of the token. |
+ **genesis** | **String**| Contract genesis |
+
+### Return type
+
+[**ContractFtGenesisCirculation**](ContractFtGenesisCirculation.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Get circulation successful. |  -  |
 
 
 ## contractNftAddressAddressCountConfirmedGet
